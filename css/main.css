@@ -1,0 +1,65 @@
+.scoreboard {
+    text-align: center;
+    margin: 0.5vw;
+    border: 3px solid black;
+    background: #DADADA;
+  }
+
+  .score {
+    text-align: center;
+    margin: 0.7vw;
+    font-family: "Lucida Console", monospace;
+    font-size: 6.0vw;
+  }
+
+  .buton {
+    text-align: center;
+    margin: 40px;
+    padding: 1.0vw;
+    margin: 1.0vw;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+  }
+
+  .buggon {
+    height: 23vw;
+    width: 23vw;
+    background: #DADADA;
+  }
+
+  .bunton {
+    height: 20vw;
+    width: 20vw;
+  }
+
+  .upgrade {
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    font-size: 3.0vw;
+  }
+
+  .shop {
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    background: #DADADA;
+    border: 3px solid black;
+    margin: 1.0vw;
+    padding: 1.0vw;
+  }
+
+  .shopText {
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    font-size: 4.0vw;
+    margin: 0.5vw;
+    padding: 0.5vw;
+  }
+
+  p {
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    font-size: 2.0vw;
+  }

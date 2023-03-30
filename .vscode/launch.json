@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Open index.html",
-            "file": "C:\\Users\\noah.alton\\.saulcoin\\saulcoin.github.io\\index.html"
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
