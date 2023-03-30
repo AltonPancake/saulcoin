@@ -242,3 +242,15 @@ var keyHandler = function(event) {
   }
 }
 document.addEventListener('keydown', keyHandler, false);
+
+document.getElementById('settingsMenu').style.display = 'none';
+
+document.getElementById('openMenu').onclick = function(){
+    document.getElementById('openMenu').style.display = 'none';
+    document.getElementById('settingsMenu').style.display = 'initial';
+}
+
+document.getElementById('closeMenu').onclick = function(){
+    document.getElementById('openMenu').style.display = 'initial';
+    document.getElementById('settingsMenu').style.display = 'none';
+}
