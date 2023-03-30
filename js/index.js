@@ -20,7 +20,7 @@ var saulflation = 10;
 
 var fastmining = window.setInterval(fastMine, 750);
 var automining = window.setInterval(autoMine, 1000);
-var automining2 = window.setInterval(autoMine2, 200);
+var automining2 = window.setInterval(autoMine2, 500);
 var bigmining = window.setInterval(bigMine, 4000);
 
 document.getElementById("upgrade2").style.display = 'none';
@@ -97,9 +97,8 @@ document.getElementById("touchOfMidas").onclick = function() {
   if (score >= 100000) {
     score = score - 100000;
     click = score;
-    amnt = amnt * 2;
-    document.getElementById("clickie").innerHTML = ("+ " + amnt + " per click");
     document.getElementById("score").innerHTML = ("saulcoins")
+    document.getElementById("clickie").innerHTML = ("+ " + amnt + " per click");
   }
 }
 
@@ -241,3 +240,15 @@ var keyHandler = function(event) {
   }
 }
 document.addEventListener('keydown', keyHandler, false);
+
+document.getElementById('settingsMenu').style.display = 'none';
+
+document.getElementById('openMenu').onclick = function(){
+    document.getElementById('openMenu').style.display = 'none';
+    document.getElementById('settingsMenu').style.display = 'initial';
+}
+
+document.getElementById('closeMenu').onclick = function(){
+    document.getElementById('openMenu').style.display = 'initial';
+    document.getElementById('settingsMenu').style.display = 'none';
+}
