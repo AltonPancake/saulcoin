@@ -102,7 +102,7 @@ document.getElementById("upgrade").onclick = function() {
     upgrade1();
     } else if (ss.amnt <= 30){
       upgrade2();
-    } else if (ss.amnt <= 50){
+    } else {
       upgrade3();
   }
 }

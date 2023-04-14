@@ -1,6 +1,9 @@
 .scoreboard {
     text-align: center;
-    margin: 0.5vw;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.0vw;
     border: 3px solid black;
     background: #DADADA;
   }
@@ -17,6 +20,9 @@
     margin: 40px;
     padding: 1.0vw;
     margin: 1.0vw;
+    position: absolute;
+    float: top;
+    float: left;
   }
 
   h2 {
@@ -25,20 +31,44 @@
   }
 
   .buggon {
-    height: 23vw;
-    width: 23vw;
+    height: 35vw;
+    width: 35vw;
     background: #DADADA;
+    border: 2px solid black;
   }
 
   .bunton {
-    height: 20vw;
-    width: 20vw;
+    height: 33vw;
+    width: 33vw;
   }
 
   .upgrade {
     text-align: center;
     font-family: "Lucida Console", monospace;
     font-size: 3.0vw;
+    margin: 0.5vw;
+    border: 2px solid black;
+  }
+
+  .saveMenu{
+      text-align: center;
+      font-family: "Lucida Console", monospace;
+      background: #DADADA;
+      border: 3px solid black;
+      margin-left: 40.0vw;
+      margin-right: 40.0vw;
+      padding: 1.0vw;
+  }
+
+  .saveButton{
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    font-size: 3.0vw;
+    position: absolute;
+    float: left;
+    margin-top: 40.0vw;
+    margin-left: 15vw;
+    border: 2px solid black;
   }
 
   .shop {
@@ -46,8 +76,11 @@
     font-family: "Lucida Console", monospace;
     background: #DADADA;
     border: 3px solid black;
-    margin: 1.0vw;
+    margin: 2.0vw;
     padding: 1.0vw;
+    float: right;
+    width: 55%;
+    height: 48.0vw;
   }
 
   .shopText {
@@ -85,4 +118,14 @@
     margin-right: 32%;
     padding: 1.0vw;
     margin-top: 2.0vw;
+  }
+
+  .main {
+    border: 3px solid black;
+    background: #DADADA;
+    height: 55.0vw;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
   }
