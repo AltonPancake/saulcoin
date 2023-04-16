@@ -17,16 +17,20 @@ if(localStorage.getItem("data") != null){
   ss = JSON.parse(localStorage.getItem("data"));
 }
 
+document.getElementById('save').onclick = function(){
+  saveState();
+}
+
 var automining = window.setInterval(addScore, ss.time);
 
 var save = window.setInterval(saveState, 60000);
 
 document.getElementById("touchOfMidas").style.display = 'none';
 
-document.getElementById("junkAutominer").innerHTML = ("Junk Autominer (-" + ss.junkAutominerCost + ") - +1 saulcoin per second");
-document.getElementById("badAutominer").innerHTML = ("Bad Autominer (-" + ss.badAutominerCost + ") - +5 saulcoins per second");
-document.getElementById("okayAutominer").innerHTML = ("Okay Autominer (-" + ss.okayAutominerCost + ") - +25 saulcoins per second");
-document.getElementById("goodAutominer").innerHTML = ("Good Autominer (-" + ss.goodAutominerCost + ") - +50 saulcoins per second");
+document.getElementById("junkAutominer").innerHTML = ("Junk Autominer (-" + ss.junkAutominerCost + " saulcoins)  +1 saulcoin per second");
+document.getElementById("badAutominer").innerHTML = ("Bad Autominer (-" + ss.badAutominerCost + " saulcoins)  +5 saulcoins per second");
+document.getElementById("okayAutominer").innerHTML = ("Okay Autominer (-" + ss.okayAutominerCost + " saulcoins)  +25 saulcoins per second");
+document.getElementById("goodAutominer").innerHTML = ("Good Autominer (-" + ss.goodAutominerCost + " saulcoins)  +50 saulcoins per second");
 document.getElementById("scps").innnerHTML = ("saulcoins per second: " + ss.sps);
 
 document.getElementById("junkAutominer").onclick = function(){
@@ -37,7 +41,7 @@ document.getElementById("junkAutominer").onclick = function(){
   ss.junkAutominerCost = Math.round(ss.junkAutominerCost * 1.25);
   ss.time = 1000/ss.sps;
   document.getElementById("score").innerHTML = ("saulcoins: " + ss.click);
-  document.getElementById("junkAutominer").innerHTML = ("Junk Autominer (-" + ss.junkAutominerCost + " saulcoins) - +1 saulcoin per second");
+  document.getElementById("junkAutominer").innerHTML = ("Junk Autominer (-" + ss.junkAutominerCost + " saulcoins)  +1 saulcoin per second");
   document.getElementById("scps").innerHTML = ("saulcoins per second: " + ss.sps);
   window.clearInterval(automining);
   automining = window.setInterval(addScore, ss.time);
@@ -54,7 +58,7 @@ document.getElementById("badAutominer").onclick = function(){
   ss.badAutominerCost = Math.round(ss.badAutominerCost * 1.5);
   ss.time = 1000/ss.sps;
   document.getElementById("score").innerHTML = ("saulcoins: " + ss.click);
-  document.getElementById("badAutominer").innerHTML = ("Bad Autominer (-" + ss.badAutominerCost + " saulcoins) - +5 saulcoins per second");
+  document.getElementById("badAutominer").innerHTML = ("Bad Autominer (-" + ss.badAutominerCost + " saulcoins)  +5 saulcoins per second");
   document.getElementById("scps").innerHTML = ("saulcoins per second: " + ss.sps);
   window.clearInterval(automining);
   automining = window.setInterval(addScore, ss.time);
@@ -71,7 +75,7 @@ document.getElementById("okayAutominer").onclick = function(){
   ss.okayAutominerCost = Math.round(ss.okayAutominerCost * 1.75);
   ss.time = 1000/ss.sps;
   document.getElementById("score").innerHTML = ("saulcoins: " + ss.click);
-  document.getElementById("okayAutominer").innerHTML = ("Okay Autominer (-" + ss.okayAutominerCost + " saulcoins) - +10 saulcoins per second");
+  document.getElementById("okayAutominer").innerHTML = ("Okay Autominer (-" + ss.okayAutominerCost + " saulcoins)  +10 saulcoins per second");
   document.getElementById("scps").innerHTML = ("saulcoins per second: " + ss.sps);
   window.clearInterval(automining);
   automining = window.setInterval(addScore, ss.time);
@@ -88,7 +92,7 @@ document.getElementById("goodAutominer").onclick = function(){
   ss.goodAutominerCost = Math.round(ss.goodAutominerCost * 2);
   ss.time = 1000/ss.sps;
   document.getElementById("score").innerHTML = ("saulcoins: " + ss.click);
-  document.getElementById("goodAutominer").innerHTML = ("Good Autominer (-" + ss.goodAutominerCost + " saulcoins) - +50 saulcoins per second");
+  document.getElementById("goodAutominer").innerHTML = ("Good Autominer (-" + ss.goodAutominerCost + " saulcoins)  +50 saulcoins per second");
   document.getElementById("scps").innerHTML = ("saulcoins per second: " + ss.sps);
   window.clearInterval(automining);
   automining = window.setInterval(addScore, ss.time);
@@ -201,4 +205,19 @@ function upgrade3(){
   } else {
     alert("ur literally 2 poor lmao");
   }
+}
+
+document.getElementById('prestige').onclick = function(){
+  click = 0;
+  amnt = 1;
+  score = 0;
+  upgradeCost = 25;
+  junkAutominerCost = 50;
+  badAutominerCost = 250;
+  okayAutominerCost = 750;
+  goodAutominerCost = 1500;
+  sps = 0;
+  saulTouch = 100000;
+  time = 2147483647;
+  saveState();
 }
